@@ -36,3 +36,9 @@ Before expanding the published studies:
 - Evaluate review time and browser capabilities after the first expanded study.
 
 The instructions are updated; expanded observations, responsive comparison UI, and new fluid-sizing sections have not been implemented.
+
+## To do: card font-availability labels
+
+Explore the labels below the card divider (for example “All free · Google Fonts”) before changing their design. Clarify their context and visitor goals: what decision do they support, and how do they relate to filter buttons and detailed licensing sources? Review hierarchy relative to company name, font names, summary, and study action; assess plain text versus pills, wording, theme, palette, and accessible color contrast. Do not rely on color alone or make static labels look interactive without a purpose. Start with the smallest useful variable (such as wording, weight, spacing, or color), compare the result, and change one variable at a time before considering a broader redesign. This is a future exploration; the current labels remain unchanged.
+
+Card company headings link to the source website in a new tab with the Material Icons `open_in_new` SVG (Google Material Design Icons, Apache-2.0; https://github.com/google/material-design-icons). Keep the visible icon, screen-reader new-tab notice, underline, hover treatment, and keyboard focus indicator. The study button remains a separate action; do not restore the duplicate bottom URL.
