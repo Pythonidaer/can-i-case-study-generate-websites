@@ -152,7 +152,7 @@ These are useful study categories, not an authoritative typeface taxonomy or com
 
 Append records to `data.js`; preserve all previous records. Add the matching screenshot and update the visible collection count. Keep tag strings consistent with filters.
 
-Preserve the Website Studies wordmark, Studies and Method anchors, and Review process Markdown download. The compact header stacks the brand above one short link row below 600px, without a dropdown. The Ws monogram is typographic branding, not an action icon. Do not add emoji or substitute text-glyph icons.
+Preserve the Website Studies wordmark, Studies and Method anchors, and Review process Markdown download. The header uses the standardized Typography Learning nonmodal dropdown at 1080px and below. A 44px icon-only trigger opens an opaque full-width menu; Escape, link activation, outside click, and focus leaving the header close it. Larger screens keep inline links. The Ws monogram is typographic branding, not an action icon. Do not add emoji or substitute text-glyph icons.
 
 Keep relative URLs working under the GitHub Pages repository subpath. The grid has four columns on desktop, two below 1100px, and one below 600px. Preserve native modal dialogs, explicit dismissal, and visible keyboard focus.
 
@@ -193,3 +193,7 @@ For every future study, add `fontAvailability: {checked: "YYYY-MM-DD", fonts: [.
 Availability combines with the existing typography-style filter using AND. Preserve both selections as either changes. Reset filters restores both groups. Show the current result count and an empty state. Test that the all-Google and all-free results are Drivetrain, CarGurus, Bart Stefanski, and Code Metal; that any-Google additionally includes Verbatim and CHEW; that paid includes Verbatim and Jerry Seinfeld; and that unverified includes Mercury and CHEW. Update these expected lists when verified evidence or the catalogue changes.
 
 For each new study, verify availability during the same review and include it on the card and in its detailed font section. Links and dated classifications help users choose fonts to investigate; they do not establish that a particular website used the identical distributed font file or that the user holds a paid license.
+
+## Standardized dropdown navigation
+
+The user requested Typography Learning’s navigation pattern in place of the stacked mobile link row. `navigation.css` and `navigation.js` are adapted from Pythonidaer/typography-learning’s `dist/navigation.css` and `dist/navigation.js`. Keep the 68px sticky frosted header, compact 1080px breakpoint, opaque dropdown, hamburger-to-close treatment, inert closed links, Escape dismissal, outside click/focus dismissal, link dismissal, breakpoint reset, and reduced-motion behavior. Website Studies retains its charcoal/mint palette and its existing destinations. Keep navigation styles in navigation.css and include both navigation assets in the deployment artifact.
