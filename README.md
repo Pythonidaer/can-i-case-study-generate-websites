@@ -30,12 +30,12 @@ Keep per-page/per-width evidence, status, selection reasons, and limitations in 
 
 Before expanding the published studies:
 
-- Re-review the existing eight only when separately authorized; preserve their dated desktop baseline.
-- Agree on evidence storage and study-panel presentation for multiple pages and widths before changing the current schema.
+- The eight-site desktop re-review was authorized and completed on October 28; the original baseline is preserved. Complete target-width checks when browser resizing is available.
+- Page-grouped role tables and evidence notes are implemented; extend them with measured viewport samples when available.
 - Apply the expanded protocol, verify newly encountered primary fonts, and document incomplete coverage.
 - Evaluate review time and browser capabilities after the first expanded study.
 
-The instructions are updated; expanded observations, responsive comparison UI, and new fluid-sizing sections have not been implemented.
+The site now includes multi-page/section desktop observations. Mobile/tablet rendered measurements and a public CSS implementation section remain pending.
 
 ## To do: card font-availability labels
 
@@ -47,8 +47,16 @@ Card company headings link to the source website in a new tab with the Material 
 
 The [review process](TYPOGRAPHY_REVIEW_PROCESS.md) defines the next review as a reconstructed typography guide for adapting observed approaches to new websites. Keep Role as the text-function label, use CSS property terminology consistently, and name the analysis section Visual Hierarchy. Scan selected pages broadly and document distinct typography encountered, including footer treatments when relevant. The central Type style guide should use traceable role rows, separate font size and line height, and link later commentary to those rows.
 
-The next authorized implementation should use: Website purpose summary; Fonts and roles; Type style guide; Visual Hierarchy; Spacing and line length; Reading conditions. Move detailed font licensing below the main analysis and remove repetitive generic disclaimers. Preserve actual licensing evidence and existing filters. Consider an optional evidence-based type scale interpretation without forcing a modular ratio.
+The study panels now use: Website purpose summary; Fonts and roles; Type style guide; Visual Hierarchy; Spacing and line length; Reading conditions. Detailed font licensing follows the main analysis; general methodology is shared rather than repeated in each purpose summary. Preserve actual licensing evidence and existing filters. Consider an optional evidence-based type scale interpretation without forcing a modular ratio.
 
 Future presentation tasks include a shared methodology page linked from the footer and a concise CSS implementation notes section for verified fluid sizing, clamp(), and breakpoints. Color analysis remains outside the current review scope.
 
-These are instruction updates only. Do not retry or rewrite the current eight studies until the user confirms readiness. The current renderer and study records have not been migrated to this proposed structure.
+The user authorized re-review of all eight studies. The records and renderer now implement this structure. The responsive portion remains partial because the available browser does not expose viewport resizing.
+
+## October 28 re-review evidence
+
+See [REVIEW_NOTES_2026-10-28.md](REVIEW_NOTES_2026-10-28.md) for page selection, substitutions, measured roles, CSS evidence, and remaining coverage. The 174 role samples are grouped by page or section at the actual 1363 × 936 CSS-pixel browser viewport. The requested 390 × 844, 768 × 1024, and 1440 × 900 conditions were not rendered. Do not present CSS predictions as measured mobile values.
+
+[baseline-2026-10-27.json](baseline-2026-10-27.json) preserves the original eight records. Public images remain those original dated captures; the expanded tables describe the new review. `data.js` adds `review.pages[].roles[]` with stable IDs, role names, font stacks and computed properties. `app.js` renders each group and resolves commentary references to rows inside the dialog.
+
+New primary-font findings include Tiempos on Mercury’s article, Hagrid Heavy on Verbatim, and PP Mori on CHEW. Font availability records were rechecked; the all-Google/all-free result remains Drivetrain, CarGurus, Bart Stefanski, and Code Metal. Mixed paid and unknown classifications remain explicit.

@@ -1,6 +1,6 @@
 # Website typography review process
 
-Version 4 · October 28, 2026
+Version 5 · October 28, 2026
 
 ## Purpose
 
@@ -37,7 +37,7 @@ Use plain beginner-friendly language. Distinguish legibility (recognizing charac
 
 ### Preserve the existing baseline
 
-The current eight records are homepage observations from October 27, 2026 at 1363 × 936 CSS pixels. Preserve their measurements, screenshots, and availability evidence until a separate re-review is authorized. This expanded procedure defines future work; it does not mean the eight studies have already been reviewed across pages or widths.
+The current eight records are homepage observations from October 27, 2026 at 1363 × 936 CSS pixels. Preserve their measurements, screenshots, and availability evidence until a separate re-review is authorized. The user authorized a re-review on October 28. It extends the desktop sample across pages and sections; target mobile/tablet and 1440px desktop rendering remain pending. The original records are archived in baseline-2026-10-27.json.
 
 Use the same Type Study concepts, representative text roles, evidence rules, font checks, and concise original analysis as those records. Record differences in scope explicitly rather than implying that older and newer studies have identical coverage.
 
@@ -78,7 +78,7 @@ Use a brief resize check or relevant CSS inspection to investigate meaningful ch
 
 Keep a compact per-site evidence table in repository Markdown: page purpose, final URL/state, selection or substitution reason, review status, observation date, actual viewport, sampled roles, and screenshot reference. Group measurements by page and width so every claim can be traced to a sample. Record changed fonts and repeat the availability check for any newly discovered primary family.
 
-The current card schema holds one desktop measurement table. Before publishing expanded comparisons, agree on a storage and presentation extension that preserves the original dated snapshot. Do not overwrite it with mixed-width measurements or place authoring notes in public interface copy. Until that extension is implemented, retain expanded evidence in documentation and state coverage accurately.
+The active schema now groups measurements in review.pages[].roles[]. The archived original schema holds one desktop measurement table. Preserve the original dated snapshot when extending comparisons. Do not overwrite it with mixed-width measurements or place authoring notes in public interface copy. Until that extension is implemented, retain expanded evidence in documentation and state coverage accurately.
 
 Fluid-sizing notes are optional supporting evidence, not a required new public section. If relevant CSS is available, record the property, authored declaration (for example clamp(), min(), max(), viewport units, or media query), selector/role, source location, and observed computed values at the test widths. Describe an exact formula only when the declaration is verified. If only computed values are available, say “size changes across these samples; mechanism unverified.” Do not infer fluid scaling, variable-font axes, or a breakpoint from a screenshot or a few values alone.
 
@@ -183,7 +183,7 @@ Size and line height in `rows` are CSS pixels. Each row has four cells: role, si
 
 ### Target structure for the next authorized re-review
 
-The current renderer and legacy schema do not yet implement this structure. Update storage and presentation deliberately during the authorized re-review; keep each original dated baseline traceable.
+The October 28 renderer implements this structure using page-grouped role tables. Keep each original dated baseline traceable.
 
 1. **Website purpose summary:** One or two concise sentences about what the website offers and what visitors need to learn, find, or do. Do not add generic inference disclaimers, inspection history, unsubmitted-form notes, or unrelated product-assessment caveats. Do not invent audience attributes to fill a second sentence.
 2. **Fonts and roles:** Identify observed families, aliases where applicable, assigned roles, pairing, and fallback stacks. Keep detailed availability and licensing information in supporting material near the bottom.
@@ -247,7 +247,7 @@ Verify the new commit and check the deployed page separately. A commit to main a
 
 ## Existing studies and limits
 
-The first batch covers Drivetrain, CarGurus careers, Mercury, and Verbatim. The second covers Bart Stefanski, Code Metal, Jerry Seinfeld, and CHEW. All eight use the Type Study framework and homepage browser observations.
+The first batch covers Drivetrain, CarGurus careers, Mercury, and Verbatim. The second covers Bart Stefanski, Code Metal, Jerry Seinfeld, and CHEW. All eight originally used the Type Study framework and homepage browser observations. The October 28 re-review adds multiple pages or sections where present; see REVIEW_NOTES_2026-10-28.md for the actual scope.
 
 The original review did not establish mobile typography, accessibility conformance, contrast ratios, commercial font licensing, or variable-font axes. A later availability review adds per-font source links and reuse classifications as described below. Measurements are published in each study’s tables. Raw inspection records and agent-only instruction files are excluded from this public repository.
 
@@ -261,7 +261,7 @@ For every future study, add `fontAvailability: {checked: "YYYY-MM-DD", fonts: [.
 
 “All fonts on Google Fonts” and “All fonts free for commercial use” require every documented primary family to qualify; empty or incomplete records cannot pass. “At least one Google Font” allows mixed pairings. “Includes paid fonts” and “Includes unverified licenses” are separate: an unknown is not automatically paid. Exclude fallback/system stacks and decorative logo artwork from these primary-font checks, and state the scope in the UI.
 
-Availability is now controlled by Google Font(s) and Free Font(s) toggle buttons alongside the style buttons. Multiple styles combine with OR; the selected availability requirements narrow those style results with AND. Each selected button can be pressed again to remove it. All styles clears only the style selection. There is no dropdown, reset button, explanatory filter paragraph, or result count. Preserve an informative empty state. Test that the all-Google and all-free results are Drivetrain, CarGurus, Bart Stefanski, and Code Metal; that any-Google additionally includes Verbatim and CHEW; that paid includes Verbatim and Jerry Seinfeld; and that unverified includes Mercury and CHEW. Update these expected lists when verified evidence or the catalogue changes.
+Availability is now controlled by Google Font(s) and Free Font(s) toggle buttons alongside the style buttons. Multiple styles combine with OR; the selected availability requirements narrow those style results with AND. Each selected button can be pressed again to remove it. All styles clears only the style selection. There is no dropdown, reset button, explanatory filter paragraph, or result count. Preserve an informative empty state. Test that the all-Google and all-free results are Drivetrain, CarGurus, Bart Stefanski, and Code Metal; that any-Google additionally includes Verbatim and CHEW; that paid includes Mercury, Verbatim, Jerry Seinfeld, and CHEW; and that unverified includes Mercury and CHEW. Update these expected lists when verified evidence or the catalogue changes.
 
 For each new study, verify availability during the same review and include it on the card and in its detailed font section. Links and dated classifications help users choose fonts to investigate; they do not establish that a particular website used the identical distributed font file or that the user holds a paid license.
 
@@ -274,3 +274,11 @@ The user requested Typography Learning’s navigation pattern in place of the st
 User-requested interface: Google Font(s) and Free Font(s) join the existing style buttons. Each button uses aria-pressed and toggles independently. Style choices form a union so Single family and Two families can both be selected without cancelling each other. The availability requirements intersect that union: all documented primary families must be on Google Fonts or verified free for commercial use, respectively. Unknown or empty family records cannot qualify. Both availability buttons may be active together. Clicking All styles clears style restrictions while preserving availability selections. Clicking the last active style restores All styles. No selected filters means the complete gallery.
 
 Removed the dropdown, Reset filters control, filter explanatory paragraph, and result count at the user’s request. Keep detailed licensing sources and scope inside study panels. Test selecting multiple style buttons, combining with both font buttons, toggling individual filters off, preserving other selections, and returning to the full gallery.
+
+## Active review schema and validation
+
+The October 28 re-review is authorized. `data.js` retains existing card fields and adds `review: {version: 2, observed, timezone, coverage, pages: [...]}`. Each page has a stable `id`, `title`, verified `url`, actual `viewport`, `status`, optional selection `note`, and `roles`. Each role records `id`, `role`, `tag`, `family`, full `stack`, computed `size`, `line`, `weight`, `letterSpacing`, `fontStyle`, `textTransform`, `align`, and measured box `width`/`height`; `contentCase` distinguishes uppercase source content from CSS text-transform. Add verified `fontVariationSettings` when it materially affects interpretation.
+
+Analysis references use `[[page-id:role-id]]`. The renderer resolves them to links that scroll and focus the row inside the open dialog. Validate every reference, unique study/page/role identifiers, full font coverage, consistent terminology, and preservation of the baseline. New fields must not silently mix dates, widths, pages, or font availability scopes. The legacy `rows` field is retained for compatibility, not the source for expanded tables.
+
+Current results are 174 selected role samples across eight studies at 1363 × 936 CSS pixels. The browser cannot set requested viewport sizes; coverage is explicitly partial. Keep this limitation in shared methodology, the coverage disclosure, and evidence notes, not repetitive purpose-summary disclaimers. No public CSS implementation section or separate methodology page was added. The original dated screenshots remain historical references.
