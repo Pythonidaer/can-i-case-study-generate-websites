@@ -178,8 +178,18 @@ Verify the new commit and check the deployed page separately. A commit to main a
 
 The first batch covers Drivetrain, CarGurus careers, Mercury, and Verbatim. The second covers Bart Stefanski, Code Metal, Jerry Seinfeld, and CHEW. All eight use the Type Study framework and homepage browser observations.
 
-The review did not establish mobile typography, accessibility conformance, contrast ratios, commercial font licensing, or variable-font axes. Measurements are published in each study’s tables. Raw inspection records and agent-only instruction files are excluded from this public repository.
+The original review did not establish mobile typography, accessibility conformance, contrast ratios, commercial font licensing, or variable-font axes. A later availability review adds per-font source links and reuse classifications as described below. Measurements are published in each study’s tables. Raw inspection records and agent-only instruction files are excluded from this public repository.
 
 ## Suggested continuation prompt
 
 “Read TYPOGRAPHY_REVIEW_PROCESS.md and AGENTS.md in the Website Studies repository. Append studies for these homepages, preserving previous cards. Inspect each page visually and measure computed CSS. Label interpretations and unknowns, capture verified screenshots, use the existing study schema, check the relevant interactions, and publish to main when authorized.”
+
+## Font availability review and filtering
+
+For every future study, add `fontAvailability: {checked: "YYYY-MM-DD", fonts: [...]}`. Each primary family record has `name`, `google` (true, false, or null for unverified), `license` (free, paid, or unknown), `label`, `source`, optional `licenseUrl`, and `note`. Check official Google Fonts catalog pages and the family’s license file, or the foundry/distributor’s licensing page. Record the check date and links. Do not treat a free trial or personal-use-only download as free commercial web use. Do not infer the identity or license of an unexplained CSS alias; record it as unknown. No font binaries need to be copied.
+
+“All fonts on Google Fonts” and “All fonts free for commercial use” require every documented primary family to qualify; empty or incomplete records cannot pass. “At least one Google Font” allows mixed pairings. “Includes paid fonts” and “Includes unverified licenses” are separate: an unknown is not automatically paid. Exclude fallback/system stacks and decorative logo artwork from these primary-font checks, and state the scope in the UI.
+
+Availability combines with the existing typography-style filter using AND. Preserve both selections as either changes. Reset filters restores both groups. Show the current result count and an empty state. Test that the all-Google and all-free results are Drivetrain, CarGurus, Bart Stefanski, and Code Metal; that any-Google additionally includes Verbatim and CHEW; that paid includes Verbatim and Jerry Seinfeld; and that unverified includes Mercury and CHEW. Update these expected lists when verified evidence or the catalogue changes.
+
+For each new study, verify availability during the same review and include it on the card and in its detailed font section. Links and dated classifications help users choose fonts to investigate; they do not establish that a particular website used the identical distributed font file or that the user holds a paid license.
