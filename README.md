@@ -1,6 +1,6 @@
 # Website Studies
 
-Eight independent typography case studies with homepage screenshots, measured CSS samples, and practical learning exercises.
+Independent typography case studies with homepage screenshots, measured CSS samples, and practical learning exercises.
 
 Published with GitHub Pages from `main` using `.github/workflows/deploy-pages.yml`. Root source files are copied into a static deployment artifact. Open `index.html` through a static server for local preview, for example `python3 -m http.server 8000`. No dependencies or build step are required.
 
@@ -60,3 +60,7 @@ See [REVIEW_NOTES_2026-10-28.md](REVIEW_NOTES_2026-10-28.md) for page selection,
 [baseline-2026-10-27.json](baseline-2026-10-27.json) preserves the original eight records. Public images remain those original dated captures; the expanded tables describe the new review. `data.js` adds `review.pages[].roles[]` with stable IDs, role names, font stacks and computed properties. `app.js` renders each group and resolves commentary references to rows inside the dialog.
 
 New primary-font findings include Tiempos on Mercury’s article, Hagrid Heavy on Verbatim, and PP Mori on CHEW. Font availability records were rechecked; the all-Google/all-free result remains Drivetrain, CarGurus, Bart Stefanski, and Code Metal. Mixed paid and unknown classifications remain explicit.
+
+## freeCodeCamp addition — October 28
+
+Added the homepage, linked About/FAQ publication page, and default course catalog using the active page-grouped format. All eight earlier studies and their baseline are preserved. The new capture is dated October 28; earlier captures keep their original dates. See the freeCodeCamp section in [review notes](REVIEW_NOTES_2026-10-28.md#freecodecamp) for selections, CSS evidence, font checks, and limitations. The new study qualifies for all-Google/all-free filters for its primary downloadable family, Lato; system stacks remain explicitly documented and excluded from those licensing checks.

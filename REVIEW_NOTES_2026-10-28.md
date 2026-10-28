@@ -556,3 +556,93 @@ The six main sections now use the approved guide structure. Page-grouped tables 
 - Recheck wrapping, hidden/replaced roles, small-text reading conditions, and extra transition widths only where meaningful.
 - Consider the optional public CSS implementation section and a dedicated footer-linked methodology page separately; neither is added by this review.
 - Explore the availability labels using the existing README TODO, changing one useful variable at a time.
+
+## freeCodeCamp
+
+Added independently on October 28, 2026 (America/New_York). The eight-site review above remains unchanged. Actual viewport: **1363 × 936 CSS px** on all three samples. Browser zoom and device pixel ratio were not independently verified. All three pages are **partial** against the responsive protocol: the browser exposes no viewport resizing, so 390 × 844, 768 × 1024, and 1440 × 900 remain unrendered.
+
+| Page | Final URL / state | Selection reason | Status | Screenshot |
+| --- | --- | --- | --- | --- |
+| Homepage | https://www.freecodecamp.org/ | Entry page; scan includes benefits, testimonials, curriculum, catalog preview, FAQ, and footer. | Partial; desktop sampled | assets/freecodecamp-type.jpg — October 28 |
+| About / FAQ article | https://www.freecodecamp.org/news/about/ | Linked About page supplies sustained reading in the publication template. | Partial; desktop sampled | Visually inspected; no retained capture |
+| Course catalog | https://www.freecodecamp.org/catalog | See All Courses opens a distinct listing route; default Level: All and Topic: All state. | Partial; desktop sampled | Visually inspected; no retained capture |
+
+Homepage content initially loaded after an empty shell. Returning from the catalog briefly showed the hero without its image; the saved reference was captured after the image settled. The About link opened another browser tab. Catalog selection used the visible See All Courses link and retained default filters. No access wall or bot challenge occurred. Signed-in lesson/editor screens, language variants, code samples, and course detail templates were outside this bounded three-template review. Partner advertisements were visible on the article but are excluded from the site’s primary typography inventory.
+
+Font loading APIs were unavailable in the read-only browser DOM environment (`document.fonts` could not be iterated; resource performance inspection was unavailable). Computed stacks and readable @font-face declarations support family reporting, but do not prove the rendered font file for each glyph. The system stack’s resolved platform font was not identified. No accessibility conformance or character-count claim is made.
+
+### Homepage
+
+URL: https://www.freecodecamp.org/
+
+| Role | HTML | Font family | Font size | Line height | Font weight | Letter spacing | Text box width | Alignment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Hero heading | h1 | Lato | 72px | 102.857px | 700 | normal | 629px | start |
+| Hero description | p | Lato | 23.4px | 35.1px | 400 | normal | 629px | start |
+| Action label | a | Lato | 27px | 38.5714px | 400 | normal | 330px | center |
+| Navigation label | button | Lato | 18px | 25.7143px | 400 | normal | 72px | center |
+| Section heading | h2 | Lato | 36px | 39.6px | 700 | normal | 1140px | center |
+| Benefit heading | h3 | Lato | 19.8px | 28.2857px | 700 | normal | 555px | start |
+| Benefit paragraph | p | Lato | 18px | 27px | 400 | normal | 555px | start |
+| Testimonial attribution | h3 | Lato | 23.4px | 33.4286px | 400 | normal | 266px | center |
+| Testimonial paragraph | p | Lato | 19.8px | 27px | 400 | normal | 770px | justify |
+| Curriculum link | a | Lato | 19.8px | 26.4px | 400 | normal | 1191px | left |
+| Course preview heading | h3 | Lato | 19.8px | 28.2857px | 700 | normal | 294px | start |
+| Course preview description | p | Lato | 18px | 27px | 400 | normal | 294px | start |
+| FAQ question | h3 | Lato | 22.5px | 32.1429px | 700 | normal | 1191px | start |
+| FAQ answer | p | Lato | 18px | 27px | 400 | normal | 1191px | start |
+| Footer description | p | Lato | 16px | 30px | 400 | normal | 620px | start |
+| Footer donation prompt | p | Lato | 18px | 30px | 700 | normal | 620px | start |
+| Footer heading | h2 | Lato | 16px | 17.6px | 700 | normal | 650px | center |
+| Footer navigation | a | Lato | 16px | 25.6px | 400 | normal | 298px | start |
+
+### About / FAQ article
+
+URL: https://www.freecodecamp.org/news/about/
+
+| Role | HTML | Font family | Font size | Line height | Font weight | Letter spacing | Text box width | Alignment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Article heading | h1 | Lato | 50px | 57.5px | 700 | normal | 1040px | start |
+| Article date | time | Lato | 14px | 24px | 600 | normal | 123px | start |
+| Author label | a | Lato | 20px | 24px | 700 | normal | 129px | start |
+| Article section heading | h2 | System sans-serif | 36px | 41.4px | 700 | normal | 720px | start |
+| Article paragraph | p | Lato | 22px | 35.2px | 400 | normal | 720px | start |
+| Inline article link | a | Lato | 22px | 35.2px | 400 | normal | 428px | start |
+| Curriculum banner | p | Lato | 17px | 24px | 700 | normal | 528px | start |
+| Author follow-up | p | Lato | 15px | 19.5px | 400 | normal | 129px | start |
+| Publication credit | a | Lato | 14px | 22.4px | 400 | normal | 219px | start |
+
+### Course catalog
+
+URL: https://www.freecodecamp.org/catalog
+
+| Role | HTML | Font family | Font size | Line height | Font weight | Letter spacing | Text box width | Alignment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Listing heading | h1 | Lato | 27px | 38.5714px | 700 | normal | 1348px | center |
+| Course category | div | Lato | 15.3px | 21.8571px | 400 | normal | 62px | start |
+| Course heading | h3 | Lato | 19.8px | 28.2857px | 700 | normal | 362px | start |
+| Course description | p | Lato | 18px | 27px | 400 | normal | 362px | start |
+
+### CSS evidence and interpretation
+
+Homepage stylesheet: https://www.freecodecamp.org/styles.451a2f6a8fde0c142cdc.css
+
+`.landing-top .ultra-heading` declares `font-size: 4rem`, consistent with the computed 72px Hero heading. `.big-heading` declares `2rem !important`; `.landing-page .big-heading` sets weight 700 and line height 1.1, consistent with 36px/39.6px Section heading. An authored max-width 500px rule changes `.big-heading` to `1.5rem !important` and CTA text to `1rem`; the final smaller-width cascade was not rendered. No fluid formula is claimed. Lato regular and bold @font-face declarations point to site-hosted WOFF files; unused declarations for Hack-ZeroSlash and other language fonts do not establish primary rendered use.
+
+Publication stylesheet: https://www.freecodecamp.org/news/assets/css/screen-0e9ca6e993.css
+
+The article’s primary stylesheet was readable, while Google Fonts, Prism, and Font Awesome stylesheets were inaccessible through CSSOM. Computed Article section heading values use `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`. Retain that stack rather than assigning a specific font identity. The inherited blockquote size was excluded from the homepage guide in favor of the nested paragraph’s computed 19.8px/27px treatment. Inline emphasis exists in testimonials; this sample does not enumerate every bold phrase.
+
+### Font availability — checked October 28, 2026
+
+Lato: Google Fonts; free for commercial use under SIL OFL 1.1. https://fonts.google.com/specimen/Lato · https://github.com/google/fonts/blob/main/ofl/lato/OFL.txt
+
+System stacks, logo artwork, advertisements, and unused font-face declarations are excluded from primary downloadable-font classifications. The Single family filter covers Lato with the system-heading exception explained in Fonts and roles. All-Google and all-free expected results now additionally include freeCodeCamp; other existing availability classifications are unchanged.
+
+### Integration and validation
+
+The study adds 34 traceable role rows. A per-record reference date prevents the October 28 capture being mislabeled October 27; older records retain their original date. Validation results are recorded below after checks.
+
+Catalog follow-up: Filter label (button, Level: All) is Lato 18px/25.7143px, weight 400, normal letter spacing, centered in a 130 × 45px box. Course level (div, Beginner) and Course duration (div, 5 hours) are Lato 16.2px/23.1429px, weight 400, normal letter spacing, start aligned in 91 × 23px and 80 × 23px boxes. Both are actual text-bearing containers with adjacent icons, not unused inherited font declarations.
+
+Pre-publication checks passed: JavaScript syntax for app/data/navigation; nine unique study IDs; required fields; legacy four-cell rows; all role references resolve; nonempty images; original eight records deeply equal to main; baseline and previous assets unchanged. All-Google and all-free results each contain the previous four plus freeCodeCamp. The local static server started, but the separate cloud browser’s localhost returned a bearer-token error; file-protocol preview was disallowed. Browser interaction checks will therefore use the authorized public Pages deployment. Narrow layout and text enlargement remain unverified.
