@@ -42,3 +42,13 @@ The instructions are updated; expanded observations, responsive comparison UI, a
 Explore the labels below the card divider (for example “All free · Google Fonts”) before changing their design. Clarify their context and visitor goals: what decision do they support, and how do they relate to filter buttons and detailed licensing sources? Review hierarchy relative to company name, font names, summary, and study action; assess plain text versus pills, wording, theme, palette, and accessible color contrast. Do not rely on color alone or make static labels look interactive without a purpose. Start with the smallest useful variable (such as wording, weight, spacing, or color), compare the result, and change one variable at a time before considering a broader redesign. This is a future exploration; the current labels remain unchanged.
 
 Card company headings link to the source website in a new tab with the Material Icons `open_in_new` SVG (Google Material Design Icons, Apache-2.0; https://github.com/google/material-design-icons). Keep the visible icon, screen-reader new-tab notice, underline, hover treatment, and keyboard focus indicator. The study button remains a separate action; do not restore the duplicate bottom URL.
+
+## Typography-guide direction and re-review gate
+
+The [review process](TYPOGRAPHY_REVIEW_PROCESS.md) defines the next review as a reconstructed typography guide for adapting observed approaches to new websites. Keep Role as the text-function label, use CSS property terminology consistently, and name the analysis section Visual Hierarchy. Scan selected pages broadly and document distinct typography encountered, including footer treatments when relevant. The central Type style guide should use traceable role rows, separate font size and line height, and link later commentary to those rows.
+
+The next authorized implementation should use: Website purpose summary; Fonts and roles; Type style guide; Visual Hierarchy; Spacing and line length; Reading conditions. Move detailed font licensing below the main analysis and remove repetitive generic disclaimers. Preserve actual licensing evidence and existing filters. Consider an optional evidence-based type scale interpretation without forcing a modular ratio.
+
+Future presentation tasks include a shared methodology page linked from the footer and a concise CSS implementation notes section for verified fluid sizing, clamp(), and breakpoints. Color analysis remains outside the current review scope.
+
+These are instruction updates only. Do not retry or rewrite the current eight studies until the user confirms readiness. The current renderer and study records have not been migrated to this proposed structure.
