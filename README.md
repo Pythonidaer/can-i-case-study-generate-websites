@@ -13,3 +13,5 @@ Published with GitHub Pages from `main` using `.github/workflows/deploy-pages.ym
 - `TYPOGRAPHY_REVIEW_PROCESS.md`: repeatable review and publication workflow.
 
 Learning framework: https://github.com/Pythonidaer/typography-learning. Studies are independent observations, not official brand guidelines.
+
+Deployment: the Pages workflow runs for changes on `main` and can also be started manually from Actions.
