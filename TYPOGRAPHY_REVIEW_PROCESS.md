@@ -1,10 +1,10 @@
 # Website typography review process
 
-Version 3 · October 28, 2026
+Version 4 · October 28, 2026
 
 ## Purpose
 
-Review user-supplied websites one at a time, measure representative typography in a live browser, explain the choices using Type Study concepts, and append a screenshot-backed card to this gallery. These are independent observational studies, not official brand style guides.
+Reconstruct evidence-backed typography guides from user-supplied websites, one at a time, so readers can understand and adapt their typography approaches when building new websites. Combine rendered measurements, relevant CSS evidence, and clearly grounded interpretation using Type Study concepts. Keep color analysis outside the current scope. These are independent observational studies, not official brand style guides.
 
 Repeat this method and evidence standard. Websites, fonts, and animations can change; identical measurements or screenshots cannot be guaranteed on another date or device.
 
@@ -70,7 +70,7 @@ Use 390 × 844, 768 × 1024, and 1440 × 900 CSS pixels as representative mobile
 
 For each selected page or state, inspect the same representative text roles at all three widths, when available. Record actual inner viewport dimensions, browser/zoom conditions, date and timezone, and missing samples. If the browser cannot set a requested viewport, record the actual dimensions and the limitation; do not label a desktop capture as mobile evidence.
 
-At each width, check loaded fonts, heading wrapping, paragraph width, navigation/actions, overflow, and relevant changes of hierarchy. Record family, size, weight, line height, tracking, and text box width for corresponding roles. Note when a role disappears or is replaced rather than comparing unrelated elements.
+At each width, check loaded fonts, heading wrapping, paragraph width, navigation/actions, overflow, and relevant changes of hierarchy. Record family, size, weight, line height, letter spacing, and text box width for corresponding roles. Note when a role disappears or is replaced rather than comparing unrelated elements.
 
 Use a brief resize check or relevant CSS inspection to investigate meaningful changes. Add one diagnostic width only when needed to explain a transition; do not exhaustively scan every pixel. Separate this source-site review from testing the gallery itself. Browser samples do not replace real-device testing or establish accessibility conformance.
 
@@ -84,7 +84,11 @@ Fluid-sizing notes are optional supporting evidence, not a required new public s
 
 ## 3. Measure representative text roles
 
-Use browser developer tools or the approved browser’s read-only DOM evaluation capability. Sample the hero title, section title, paragraph, navigation, action, and caption or statistic when present.
+Use browser developer tools or the approved browser’s read-only DOM evaluation capability. Use Role to name the function of text in the interface, such as Hero heading, Hero description, Section heading, Body paragraph, Navigation link, Action label, Caption, or Statistic. Role here does not mean an HTML element, ARIA role, or future semantic color token. Record the HTML element separately when useful.
+
+Scan each selected page broadly from top to bottom rather than sampling only the hero or the first DOM matches. Document meaningful distinct typography decisions wherever encountered, including footer navigation or legal text when they introduce a distinct treatment. Footer coverage is not a mandatory separate checklist item. The commitment is to record meaningful differences encountered in reviewed pages and states, not to claim discovery of every style across the entire site.
+
+Give every sampled role a stable name and identifier within its page/state. Reuse the exact name in tables and commentary. Do not alternate between Body paragraph and Hero description unless evidence establishes they refer to the same treatment; distinguish roles even when some values match. Deduplicate repeated instances of the same role and treatment, but retain meaningful variants.
 
 The following page-scope JavaScript illustrates the discovery sampler. Run it only through the browser interface available in the current environment:
 
@@ -109,7 +113,7 @@ The following page-scope JavaScript illustrates the discovery sampler. Run it on
         size: s.fontSize,
         weight: s.fontWeight,
         line: s.lineHeight,
-        tracking: s.letterSpacing,
+        letterSpacing: s.letterSpacing,
         style: s.fontStyle,
         transform: s.textTransform,
         color: s.color,
@@ -123,7 +127,11 @@ This is a discovery sample, not an audit. It can include clipped, offscreen, scr
 
 Inspect nested spans when a heading visibly changes weight, color, font, or style. Read both the parent and its descendants. Bart Stefanski’s introduction demonstrated why: its parent reported weight 700, while some phrases were weight 400.
 
-Record font stack, size, weight, line height, tracking, text transform, alignment, and box width. Keep raw precision in notes, but round measurement tables for readability. Retain only necessary source excerpts; numeric evidence should not reproduce long marketing passages.
+Record font stack, size, weight, line height, letter spacing, text transform, alignment, and box width. Keep raw precision in notes, but round measurement tables for readability. Retain only necessary source excerpts; numeric evidence should not reproduce long marketing passages.
+
+### Inspect relevant CSS alongside rendered samples
+
+Inspect accessible authored stylesheets, style blocks, matched rules, font declarations, and typography custom properties where browser capabilities allow. Connect any rule used in the guide to a visible sampled element and its computed values at the recorded viewport. Account for the cascade, inheritance, overrides, and loading state. Unused classes, unused tokens, and font declarations alone do not establish rendered styles. If CSS is inaccessible or unreadable, retain supported computed measurements and record the limitation in evidence notes.
 
 ### Evidence rules
 
@@ -131,11 +139,11 @@ Record font stack, size, weight, line height, tracking, text transform, alignmen
 - CSS family names may be aliases. Do not infer the commercial font identity or license from an alias.
 - A CSS weight of 400 can look heavy in a display family. Weight values are not equivalent visual mass across families.
 - Intermediate weights do not prove which variable axes exist.
-- Line-height ratio equals line height divided by font size. Tracking in em equals letter spacing divided by font size.
+- Line-height ratio equals line height divided by font size. Letter spacing in em equals letter spacing divided by font size.
 - Element width is a box measurement, not a character-count measure.
 - A few sampled sizes do not establish a complete modular scale or responsive formula.
 - A screenshot does not establish contrast ratios or accessibility conformance.
-- Label inferred purpose, audience, personality, and effects as interpretations.
+- Distinguish measured facts from interpretations through grounded wording such as “may help” where appropriate. Keep general inference notices in shared methodology rather than repeating disclaimers in every short section.
 
 ## 4. Capture the reference screenshot
 
@@ -157,13 +165,13 @@ Write original analysis using the same fields as existing records:
   fonts: 'Observed family names or explicitly labeled aliases',
   tags: ['Two families', 'Useful category'],
   summary: 'A concise description of the typography approach.',
-  purpose: 'Reader task and audience, with inference labeled.',
+  purpose: 'One or two concise sentences describing what the website offers and the visitor task.',
   pairing: 'Which family handles which role and what the contrast does.',
   rows: [
-    ['Hero title', '56 / 67.2', '500', '−1.12px']
+    ['Hero heading', '56 / 67.2', '500', '−1.12px']
   ],
   hierarchy: 'Reading order, scale, weight, case, and emphasis.',
-  spacing: 'Widths, line-height ratios, tracking, and alignment.',
+  spacing: 'Widths, line-height ratios, letter spacing, and alignment.',
   reading: 'Reading conditions and specific untested concerns.',
   lesson: 'One transferable typography principle.',
   exercise: 'One practical comparison to try.',
@@ -171,11 +179,34 @@ Write original analysis using the same fields as existing records:
 }
 ```
 
-Size and line height in `rows` are CSS pixels. Each row has four cells: role, size/line height, weight, tracking. Include five or six representative roles rather than every DOM element.
+Size and line height in `rows` are CSS pixels. Each row has four cells: role, size/line height, weight, letter spacing. The legacy records contain approximately five or six roles; this is not a cap for future guides. Include enough distinct observed roles and variants to explain the sampled typography system without listing every DOM instance.
 
-The dialog presents six numbered sections: purpose and audience; font roles and pairing; sampled styles; hierarchy; spacing and line length; reading conditions. It then shows a lesson, exercise, screenshot, and Type Study reference.
+### Target structure for the next authorized re-review
 
-Keep the card summary short and details inside the dialog. These are desktop snapshots, not official design tokens or full responsive specifications. If later studies use different dates or viewports, add per-study metadata and update the renderer instead of retaining inaccurate shared labels.
+The current renderer and legacy schema do not yet implement this structure. Update storage and presentation deliberately during the authorized re-review; keep each original dated baseline traceable.
+
+1. **Website purpose summary:** One or two concise sentences about what the website offers and what visitors need to learn, find, or do. Do not add generic inference disclaimers, inspection history, unsubmitted-form notes, or unrelated product-assessment caveats. Do not invent audience attributes to fill a second sentence.
+2. **Fonts and roles:** Identify observed families, aliases where applicable, assigned roles, pairing, and fallback stacks. Keep detailed availability and licensing information in supporting material near the bottom.
+3. **Type style guide:** Make this the main reusable reference. Use Role, Font family, Font size, Line height, Font weight, and Letter spacing consistently; add Font style, Text transform, or other measured properties when relevant. Separate font size and line height for clarity in the future table. Identify page/state and viewport for each sample or grouped table. Keep HTML elements separate from Role. Give rows stable anchors and make role references in later commentary link to their corresponding row in the same study. Ensure those links work within the dialog without dismissing it or losing context.
+4. **Visual Hierarchy:** Explain how the measured roles use size, font weight, casing, placement, and spacing to communicate importance and reading order. Refer to the exact named roles and their rows.
+5. **Spacing and line length:** Use those same role names to explain measured line height, letter spacing, text width, alignment, wrapping, and relevant block spacing. Distinguish box width from actual line length; do not claim measured character counts unless checked.
+6. **Reading conditions:** Explain what the observed typography may do for readers, grounded in particular roles and comparisons. Identify specific supported concerns without repeatedly inserting generic audit disclaimers.
+
+Follow the main analysis with concise supporting material: transferable lesson or exercise where useful, reference captures, detailed font availability/license sources, and the learning reference. Avoid repetitive Google Fonts and licensing statements; each primary family needs one clear dated classification and its relevant sources, while existing card/filter behavior remains intact.
+
+Use developer-friendly CSS terminology throughout: font family, font size, line height, font weight, letter spacing, font style, text transform, and text width. Do not switch to type-design synonyms for the same property. Use the same role names across the guide and analysis.
+
+### Type scale interpretation
+
+A type scale is the set of sizes used. A modular scale generates sizes using a repeated ratio. Compare observed role sizes within the same viewport and coherent role group; do not combine mobile and desktop values to manufacture a ratio. Record relevant adjacent ratios and rounding when discussing an approximate pattern. Distinguish: approximately consistent ratio; ratio with adjustments; apparently individually chosen sizes; or insufficient evidence. Treat these as interpretations unless source declarations establish the system. Do not force a modular explanation, equate visual hierarchy with a modular scale, or claim designer intent from a close numerical match.
+
+### Shared methodology and future implementation notes
+
+Keep common scope and inference explanations in the existing Method section or repository methodology. A dedicated methodology page linked from the footer is a future option, not an implemented change. Keep a limitation next to a finding only when it materially changes interpretation. Public copy must stand alone for visitors and must not address the owner or describe the authoring conversation.
+
+**TODO: CSS implementation notes.** Explore a short supporting section at the end for verified fluid sizing, `clamp()`, `min()`, `max()`, viewport units, typography custom properties, and breakpoint changes. For each useful example, connect the authored declaration and source to a named role and observed values. Distinguish verified implementation from an unexplained change in computed values. Do not add a public section merely to fill a template. This remains future presentation work; relevant evidence can be collected in repository notes during authorized reviews.
+
+Keep the card summary short and details inside the dialog. These are reconstructed guides from sampled pages, not official design tokens or complete responsive specifications. Add per-study/page/viewport metadata before expanded comparisons; never combine different samples into an unlabeled legacy row.
 
 ### Filter meanings
 
@@ -199,7 +230,7 @@ Keep relative URLs working under the GitHub Pages repository subpath. The grid h
 ## 7. Validate
 
 1. Run `node --check app.js` and `node --check data.js`.
-2. Check unique IDs, expected count, required fields, four cells per measurement row, and nonempty image files.
+2. Check unique IDs, expected count, required fields, measurement rows matching the active schema (four cells in legacy records), and nonempty image files.
 3. Serve the root with an ordinary static server and open it through the approved browser preview.
 4. Inspect the header, grid, and reference images. Open new dialogs and confirm the corresponding title, measurements, analysis, and screenshot.
 5. Exercise filters, Show all, Close study, Escape, and the section links. Verify counts against the data.
