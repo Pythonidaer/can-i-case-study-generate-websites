@@ -22,13 +22,17 @@ The first eight studies are homepage observations recorded on October 27, 2026 (
 
 Existing source-website typography measurements do not establish mobile or tablet behavior. Later checks of this gallery’s own mobile layout are separate from responsive audits of the websites being studied. Keep observation metadata in repository documentation rather than the public page introduction or study-panel status text.
 
-## To do: broader and responsive typography reviews
+## Expanded review protocol and remaining work
 
-- Define a small, repeatable page sample per website: homepage, one content-heavy page, and one relevant product, service, or listing page when available. Select by typography roles rather than inspecting every page.
-- Agree on consistent representative viewport widths, for example 390px (mobile), 768px (tablet), and 1440px (desktop). Treat these as test widths, not universal device breakpoints.
-- Check a small amount of resizing or the declared CSS around visible layout/type changes. Capture an extra width only when it reveals a meaningful transition; do not audit every possible screen width.
-- Record per-page and per-width font family, size, weight, line height, tracking, text width, and wrapping. Distinguish fixed values, fluid scaling, and breakpoint changes only when supported by evidence.
-- Decide how responsive comparisons should appear in study panels and how to store their evidence before extending the current study schema. Retain the original desktop snapshot as a dated baseline.
-- Review time cost and browser capabilities, then update TYPOGRAPHY_REVIEW_PROCESS.md with an approved workflow. Representative browser widths do not replace real-device checks or a full accessibility audit.
+The [review process](TYPOGRAPHY_REVIEW_PROCESS.md#2-select-pages-and-inspect-responsive-typography) now defines future page selection, SPA states, substitutions for missing page types, bounded loading/access fallbacks, and representative viewports of 390 × 844, 768 × 1024, and 1440 × 900 CSS pixels. These are test conditions, not universal device breakpoints.
 
-These are follow-up tasks, not completed observations or newly implemented responsive studies.
+Keep per-page/per-width evidence, status, selection reasons, and limitations in repository documentation. Optional fluid-sizing notes should distinguish verified CSS declarations from observed computed values.
+
+Before expanding the published studies:
+
+- Re-review the existing eight only when separately authorized; preserve their dated desktop baseline.
+- Agree on evidence storage and study-panel presentation for multiple pages and widths before changing the current schema.
+- Apply the expanded protocol, verify newly encountered primary fonts, and document incomplete coverage.
+- Evaluate review time and browser capabilities after the first expanded study.
+
+The instructions are updated; expanded observations, responsive comparison UI, and new fluid-sizing sections have not been implemented.
