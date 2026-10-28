@@ -59,7 +59,7 @@ See [REVIEW_NOTES_2026-10-28.md](REVIEW_NOTES_2026-10-28.md) for page selection,
 
 [baseline-2026-10-27.json](baseline-2026-10-27.json) preserves the original eight records. Public images remain those original dated captures; the expanded tables describe the new review. `data.js` adds `review.pages[].roles[]` with stable IDs, role names, font stacks and computed properties. `app.js` renders each group and resolves commentary references to rows inside the dialog.
 
-New primary-font findings include Tiempos on Mercury’s article, Hagrid Heavy on Verbatim, and PP Mori on CHEW. Font availability records were rechecked; the all-Google/all-free result remains Drivetrain, CarGurus, Bart Stefanski, and Code Metal. Mixed paid and unknown classifications remain explicit.
+New primary-font findings include Tiempos on Mercury’s article, Hagrid Heavy on Verbatim, and PP Mori on CHEW. Font availability records were rechecked; at that re-review the all-Google/all-free result was Drivetrain, CarGurus, Bart Stefanski, and Code Metal. Mixed paid and unknown classifications remain explicit.
 
 ## freeCodeCamp addition — October 28
 
