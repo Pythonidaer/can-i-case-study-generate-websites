@@ -1,10 +1,10 @@
 # Website typography review process
 
-Version 2 · October 27, 2026
+Version 3 · October 28, 2026
 
 ## Purpose
 
-Review user-supplied homepages one at a time, measure representative typography in a live browser, explain the choices using Type Study concepts, and append a screenshot-backed card to this gallery. These are independent observational studies, not official brand style guides.
+Review user-supplied websites one at a time, measure representative typography in a live browser, explain the choices using Type Study concepts, and append a screenshot-backed card to this gallery. These are independent observational studies, not official brand style guides.
 
 Repeat this method and evidence standard. Websites, fonts, and animations can change; identical measurements or screenshots cannot be guaranteed on another date or device.
 
@@ -27,20 +27,60 @@ Publish this repository’s root source through the GitHub Pages workflow on `ma
 
 ## 1. Review the current source and learning framework
 
-Read the repository’s AGENTS.md and current files before editing. Inspect the current `main` branch and preserve existing studies and unrelated work. Never rebuild the record list from a stale copy.
+Read the current README, this process, and source files before editing. Follow AGENTS.md if one exists; do not assume this repository contains one. Inspect the current `main` branch and preserve existing studies and unrelated work. Never rebuild the record list from a stale copy.
 
 If the Type Study framework is not already available, read its README, design instructions, vocabulary page, Choosing Type article, and roadmap notes through GitHub. The framework follows purpose, audience, inspiration, font roles, sizing and spacing, and a documented type guide.
 
 Use plain beginner-friendly language. Distinguish legibility (recognizing characters) from readability (reading passages comfortably).
 
-## 2. Inspect each homepage
+## 2. Select pages and inspect responsive typography
 
-1. Retrieve the supplied URL for initial context. Search snippets or extracted page text do not establish rendered font measurements.
-2. Open the homepage in an approved live browser and record the actual URL after redirects.
-3. Read the visible page structure and inspect its appearance. Reject optional cookies if offered; do not submit forms, purchase tickets, or subscribe.
-4. Record the actual viewport width and height in CSS pixels. The first two batches were observed at 1363 × 936 CSS pixels on October 27, 2026 in America/New_York.
-5. Inspect the page again if it is blank or mid-animation. Capture only after useful content is visibly present.
-6. If access fails, report the actual error and mark the review incomplete. A timeout, 502 response, or connection error does not establish a robots.txt block. Do not bypass bot challenges.
+### Preserve the existing baseline
+
+The current eight records are homepage observations from October 27, 2026 at 1363 × 936 CSS pixels. Preserve their measurements, screenshots, and availability evidence until a separate re-review is authorized. This expanded procedure defines future work; it does not mean the eight studies have already been reviewed across pages or widths.
+
+Use the same Type Study concepts, representative text roles, evidence rules, font checks, and concise original analysis as those records. Record differences in scope explicitly rather than implying that older and newer studies have identical coverage.
+
+### Select by page purpose, with documented substitutions
+
+Start at the supplied URL and record its final URL after redirects. Use the site's navigation and visible internal links to choose a small sample:
+
+| Preferred sample | Selection rule | Fallback |
+| --- | --- | --- |
+| Homepage | Main entry page and primary hierarchy | Supplied landing page if no separate homepage is available |
+| Content-heavy page | Article, documentation, case study, about page, or comparable sustained reading | Long-form section or expanded content state on the same page |
+| Product, service, or listing page | A representative offering, detail page, directory, portfolio, or results list | Another materially different template, such as pricing, work detail, or an event page |
+
+Choose representative typography, not arbitrary URLs. Avoid three nearly identical templates. Usually inspect up to three distinct pages or meaningful states per site. A smaller site may need only one or two; mark absent page types as not applicable. Explain each substitution briefly. Add another template only when it reveals an important missing text role, and record the reason rather than expanding without limit.
+
+A single-page application can supply distinct routes or states without a full document load. Navigate through visible controls, wait for the route and useful content to settle, and record the URL plus the state, section, or tab used. Several sections on one scrolling page remain one page; do not present them as independent templates. Record routes that cannot be opened directly or states that cannot be reproduced reliably.
+
+### Loading and access fallback
+
+1. Retrieve the supplied URL for context, then inspect it in an approved live browser. Search snippets and extracted text do not establish rendered typography.
+2. Read the visible structure. Dismiss optional cookie overlays when possible. Do not submit forms, subscribe, purchase, or access account-only content without authorization.
+3. Wait for useful content and fonts to settle; scroll to trigger ordinary lazy loading. If blank or mid-animation, inspect again and allow one bounded retry or reload. Do not repeatedly retry a failing page.
+4. If a direct route fails, try reaching the same public content through the site's visible navigation. If it remains inaccessible, choose a comparable accessible public page and document the substitution.
+5. For a challenge, login wall, persistent timeout, or error, record the actual symptom, affected URL/state, date, and what could be inspected. Do not bypass access controls or bot challenges. A 502 or timeout does not establish a robots.txt block.
+6. Mark each sample complete, partial, blocked, or not applicable. Preserve supported observations and clearly identify missing roles or widths. If no useful rendered content is accessible, leave the study incomplete; do not fabricate measurements or publish an apparently complete card.
+
+### Consistent viewport sample
+
+Use 390 × 844, 768 × 1024, and 1440 × 900 CSS pixels as representative mobile, tablet, and desktop browser viewports for future expanded reviews. These are repeatable test conditions, not claims about device models or the site's CSS breakpoints.
+
+For each selected page or state, inspect the same representative text roles at all three widths, when available. Record actual inner viewport dimensions, browser/zoom conditions, date and timezone, and missing samples. If the browser cannot set a requested viewport, record the actual dimensions and the limitation; do not label a desktop capture as mobile evidence.
+
+At each width, check loaded fonts, heading wrapping, paragraph width, navigation/actions, overflow, and relevant changes of hierarchy. Record family, size, weight, line height, tracking, and text box width for corresponding roles. Note when a role disappears or is replaced rather than comparing unrelated elements.
+
+Use a brief resize check or relevant CSS inspection to investigate meaningful changes. Add one diagnostic width only when needed to explain a transition; do not exhaustively scan every pixel. Separate this source-site review from testing the gallery itself. Browser samples do not replace real-device testing or establish accessibility conformance.
+
+### Evidence notes and future presentation
+
+Keep a compact per-site evidence table in repository Markdown: page purpose, final URL/state, selection or substitution reason, review status, observation date, actual viewport, sampled roles, and screenshot reference. Group measurements by page and width so every claim can be traced to a sample. Record changed fonts and repeat the availability check for any newly discovered primary family.
+
+The current card schema holds one desktop measurement table. Before publishing expanded comparisons, agree on a storage and presentation extension that preserves the original dated snapshot. Do not overwrite it with mixed-width measurements or place authoring notes in public interface copy. Until that extension is implemented, retain expanded evidence in documentation and state coverage accurately.
+
+Fluid-sizing notes are optional supporting evidence, not a required new public section. If relevant CSS is available, record the property, authored declaration (for example clamp(), min(), max(), viewport units, or media query), selector/role, source location, and observed computed values at the test widths. Describe an exact formula only when the declaration is verified. If only computed values are available, say “size changes across these samples; mechanism unverified.” Do not infer fluid scaling, variable-font axes, or a breakpoint from a screenshot or a few values alone.
 
 ## 3. Measure representative text roles
 
@@ -150,7 +190,7 @@ These are useful study categories, not an authoritative typeface taxonomy or com
 
 ## 6. Integrate the card
 
-Append records to `data.js`; preserve all previous records. Add the matching screenshot and update the visible collection count. Keep tag strings consistent with filters.
+Append records to `data.js`; preserve all previous records. Add the matching screenshot. Do not reintroduce a visible collection count. Keep tag strings consistent with filters.
 
 Preserve the Website Studies wordmark, Studies and Method anchors, and Review process Markdown download. The header uses the standardized Typography Learning nonmodal dropdown at 1080px and below. A 44px icon-only trigger opens an opaque full-width menu; Escape, link activation, outside click, and focus leaving the header close it. Larger screens keep inline links. The Ws monogram is typographic branding, not an action icon. Do not add emoji or substitute text-glyph icons.
 
@@ -182,7 +222,7 @@ The original review did not establish mobile typography, accessibility conforman
 
 ## Suggested continuation prompt
 
-“Read TYPOGRAPHY_REVIEW_PROCESS.md and AGENTS.md in the Website Studies repository. Append studies for these homepages, preserving previous cards. Inspect each page visually and measure computed CSS. Label interpretations and unknowns, capture verified screenshots, use the existing study schema, check the relevant interactions, and publish to main when authorized.”
+“Read README.md, TYPOGRAPHY_REVIEW_PROCESS.md, and the current source in the Website Studies repository. Follow agent instructions if present. Review the supplied sites one at a time using the documented page-selection fallbacks and viewport sample. Preserve the original eight baseline studies unless re-review is authorized. Record scope, substitutions, access limits, measurements, screenshots, and font availability. Agree on a schema extension before publishing multi-page or responsive comparisons; never mix samples into a single desktop table. Check relevant interactions and publish to main only when authorized.”
 
 ## Font availability review and filtering
 
