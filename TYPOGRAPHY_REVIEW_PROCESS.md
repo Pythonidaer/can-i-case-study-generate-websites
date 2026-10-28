@@ -14,7 +14,7 @@ Repository: https://github.com/Pythonidaer/can-i-case-study-generate-websites
 
 Learning reference: https://github.com/Pythonidaer/typography-learning
 
-Publish this repository’s root through GitHub Pages from `main`. The learning reference is separate and should not be edited as part of maintaining this gallery.
+Publish this repository’s root source through the GitHub Pages workflow on `main`. The learning reference is separate and should not be edited as part of maintaining this gallery.
 
 | File | Purpose |
 | --- | --- |
@@ -170,7 +170,7 @@ Keep relative URLs working under the GitHub Pages repository subpath. The grid h
 
 The site is buildless: no dependencies or framework build are required. Keep deployable files at the repository root and retain `.nojekyll`.
 
-Commit verified changes to `main` only when authorized. Base updates on the inspected current head and avoid force pushes. Preserve the existing Pages configuration. The initial import targets branch publication from main/root without adding a competing Actions workflow. If the repository is instead configured for GitHub Actions, confirm that setting and use the appropriate Pages deployment workflow.
+Commit verified changes to `main` only when authorized. Base updates on the inspected current head and avoid force pushes. The deployment workflow is `.github/workflows/deploy-pages.yml`. It runs on pushes to main or manual dispatch, checks JavaScript, copies only public site files into a static artifact, and deploys with the official GitHub Pages actions. GitHub Pages must have GitHub Actions selected as its publishing source. Preserve any existing custom domain and access settings.
 
 Verify the new commit and check the deployed page separately. A commit to main alone is not proof that Pages publication succeeded. Check the rendered page and relative CSS, JavaScript, image, and Markdown URLs under the repository subpath.
 
