@@ -648,3 +648,69 @@ Catalog follow-up: Filter label (button, Level: All) is Lato 18px/25.7143px, wei
 Pre-publication checks passed: JavaScript syntax for app/data/navigation; nine unique study IDs; required fields; legacy four-cell rows; all role references resolve; nonempty images; original eight records deeply equal to main; baseline and previous assets unchanged. All-Google and all-free results each contain the previous four plus freeCodeCamp. The local static server started, but the separate cloud browser’s localhost returned a bearer-token error; file-protocol preview was disallowed. Browser interaction checks will therefore use the authorized public Pages deployment. Narrow layout and text enlargement remain unverified.
 
 The initial Pages deployment succeeded (commit 4214658, Actions run 40789725591), but the browser retained the previous versioned JavaScript URLs. Bumped data/app query versions in index.html for this release and removed its stale eight-study meta description. This ensures the new record and capture-date renderer request new asset URLs.
+
+## Matcha — November 3, 2026
+
+Reviewed the homepage and supplied About page, then followed the Job directory link to /jobs for a distinct listing template. All three rendered successfully. The directory presents linked role/country categories; no individual job detail page, account flow, or form submission was required. The homepage includes an animated example in its search area; it was excluded from measured input text. The screenshot includes that site-authored demonstration, not information entered during the review.
+
+Actual viewport: 1363 × 936 CSS pixels. Font loading status was loaded on the sampled pages. Browser zoom was not independently verified. The browser API exposes no resize control; the agreed mobile/tablet/1440px target widths were not rendered. Accessing CSS is not a substitute for those samples.
+
+### Homepage
+
+URL: https://matcha.fm/
+
+Status: desktop sampled; responsive coverage partial.
+
+| Role | HTML | Font family | Font size | Line height | Font weight | Letter spacing | Text box width |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Wordmark | a | JetBrains Mono | 16px | 24px | 700 | -0.16px | 57px |
+| Login action | button | JetBrains Mono | 14px | 20px | 500 | normal | 74px |
+| Hero heading | h1 | JetBrains Mono | 36px | 49.5px | 800 | -0.9px | 832px |
+| Hero description | p | JetBrains Mono | 14px | 20px | 400 | normal | 600px |
+| Service summary | span | JetBrains Mono | 12px | 16px | 400 | normal | 439px |
+| Search prompt | span | JetBrains Mono | 14px | 20px | 400 | normal | 328px |
+| Testimonial | p | JetBrains Mono | 12px | 16px | 400 | normal | 832px |
+| Statistic | span | JetBrains Mono | 16px | 24px | 600 | normal | 29px |
+| Footer navigation | a | JetBrains Mono | 12px | 16px | 400 | normal | 94px |
+
+### About
+
+URL: https://matcha.fm/about
+
+Status: desktop sampled; responsive coverage partial.
+
+| Role | HTML | Font family | Font size | Line height | Font weight | Letter spacing | Text box width |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Page heading | h1 | JetBrains Mono | 24px | 32px | 700 | normal | 736px |
+| Body paragraph | p | JetBrains Mono | 14px | 22.75px | 400 | normal | 736px |
+| Section heading | h2 | JetBrains Mono | 18px | 28px | 700 | normal | 736px |
+| Primary action | a | JetBrains Mono | 14px | 20px | 500 | normal | 132px |
+| Footer group heading | h3 | JetBrains Mono | 12px | 16px | 600 | 0.3px | 373px |
+| Footer navigation | a | JetBrains Mono | 12px | 16px | 400 | normal | 108px |
+
+### Job directory
+
+URL: https://matcha.fm/jobs
+
+Status: desktop sampled; responsive coverage partial.
+
+| Role | HTML | Font family | Font size | Line height | Font weight | Letter spacing | Text box width |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Directory heading | h1 | JetBrains Mono | 36px | 49.5px | 800 | -0.9px | 736px |
+| Directory introduction | p | JetBrains Mono | 14px | 20px | 400 | normal | 600px |
+| Search input | textarea | JetBrains Mono | 14px | 20px | 400 | normal | 728px |
+| Results summary | p | JetBrains Mono | 12px | 16px | 400 | normal | 736px |
+| Section heading | h2 | JetBrains Mono | 18px | 28px | 700 | normal | 736px |
+| Country link | a | JetBrains Mono | 14px | 20px | 400 | normal | 50px |
+| Role category link | a | JetBrains Mono | 18px | 28px | 700 | normal | 313px |
+| Filter group heading | h3 | JetBrains Mono | 14px | 20px | 600 | normal | 736px |
+| Job title link | a | JetBrains Mono | 14px | 20px | 500 | normal | 260px |
+| Company section heading | h2 | JetBrains Mono | 16px | 24px | 600 | normal | 736px |
+
+### CSS and font evidence
+
+The sampled pages use JetBrains Mono with a monospace fallback. Primary-font availability was verified against Google Fonts, its OFL file, and the JetBrains family page: https://www.jetbrains.com/lp/mono/. The Matcha study qualifies for both availability filters.
+
+Matched rules in https://matcha.fm/_next/static/css/6e5761b7ee539ce3.css include `.text-2xl` at 1.5rem/2rem, `.text-sm` at .875rem/1.25rem, and `.text-xs` at .75rem/1rem. The main heading matches `.lg:text-4xl` at min-width 1024px (2.25rem) and `.lg:leading-snug` (1.375). The observed result is 36px/49.5px. `.tracking-tight` supplies −.025em, which computes to −.9px on that heading. These are source declarations and desktop measurements; no final mobile values or universal fluid formula are claimed.
+
+Snapshot: assets/matcha-type.jpg, November 3, 2026. Existing nine records and captures remain unchanged. The Sites source was first synchronized from GitHub main commit 957fda547f288c5df6b53e3b49e66ef88b1b1301, then extended with Matcha.

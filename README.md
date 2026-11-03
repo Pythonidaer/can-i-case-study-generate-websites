@@ -64,3 +64,7 @@ New primary-font findings include Tiempos on Mercury’s article, Hagrid Heavy o
 ## freeCodeCamp addition — October 28
 
 Added the homepage, linked About/FAQ publication page, and default course catalog using the active page-grouped format. All eight earlier studies and their baseline are preserved. The new capture is dated October 28; earlier captures keep their original dates. See the freeCodeCamp section in [review notes](REVIEW_NOTES_2026-10-28.md#freecodecamp) for selections, CSS evidence, font checks, and limitations. The new study qualifies for all-Google/all-free filters for its primary downloadable family, Lato; system stacks remain explicitly documented and excluded from those licensing checks.
+
+## Matcha addition — November 3, 2026
+
+Added the homepage, About page, and linked job directory with 25 measured roles using the existing page-grouped guide format. JetBrains Mono qualifies for Google Fonts and free-font filters. The review covers the actual desktop viewport; other target widths remain pending. See [review notes](REVIEW_NOTES_2026-10-28.md#matcha--november-3-2026) for evidence and limitations. Existing studies are preserved.
