@@ -290,3 +290,7 @@ The gallery now contains nine studies and 208 selected role samples. freeCodeCam
 ## Matcha addition (November 3, 2026)
 
 The gallery now contains ten studies and 233 selected roles. Matcha adds 25 roles across homepage, About, and job directory. Its primary family, JetBrains Mono, qualifies for both Google Fonts and free-font filters. Actual rendering remains at 1363 × 936 CSS pixels; target-width limitations are explicit. The November 3 referenceDate labels its own capture. Preserve the nine earlier records. Matcha evidence is appended to REVIEW_NOTES_2026-10-28.md; use its dated section rather than treating the file title as the date of every observation.
+
+## Frameable addition (November 4, 2026)
+
+Frameable adds 47 selected roles across the actual homepage, welcome guide with an expanded Products dropdown, and Whiteboard product page at 1363 × 936 CSS pixels. The gallery now contains eleven studies and 280 selected roles. The November 4 reference capture shows the minimal root page. GT America and Reckless are paid, non-Google primary families: Frameable qualifies for Two families and paid filters, and does not qualify for all-Google, any-Google, all-free, or unverified-license filters. Existing filter results remain unchanged otherwise. Target-width measurements remain pending; see the dated Frameable section of REVIEW_NOTES_2026-10-28.md.

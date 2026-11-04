@@ -714,3 +714,94 @@ The sampled pages use JetBrains Mono with a monospace fallback. Primary-font ava
 Matched rules in https://matcha.fm/_next/static/css/6e5761b7ee539ce3.css include `.text-2xl` at 1.5rem/2rem, `.text-sm` at .875rem/1.25rem, and `.text-xs` at .75rem/1rem. The main heading matches `.lg:text-4xl` at min-width 1024px (2.25rem) and `.lg:leading-snug` (1.375). The observed result is 36px/49.5px. `.tracking-tight` supplies −.025em, which computes to −.9px on that heading. These are source declarations and desktop measurements; no final mobile values or universal fluid formula are claimed.
 
 Snapshot: assets/matcha-type.jpg, November 3, 2026. Existing nine records and captures remain unchanged. The Sites source was first synchronized from GitHub main commit 957fda547f288c5df6b53e3b49e66ef88b1b1301, then extended with Matcha.
+
+## Frameable — November 4, 2026
+
+### Scope and selection
+
+| Sample | Final URL/state | Reason | Status | Actual viewport |
+| --- | --- | --- | --- | --- |
+| Homepage | https://frameable.com/ | Supplied company entry point | Desktop sampled | 1363 × 936 CSS px |
+| Welcome guide | https://frameable.com/resources/getting-started/welcome | Sustained reading; includes the Products dropdown expanded with a pointer | Desktop sampled | 1363 × 936 CSS px |
+| Whiteboard | https://frameable.com/whiteboard | Product template reached through the guide’s visible Products menu | Desktop sampled | 1363 × 936 CSS px |
+
+Observed November 4, 2026, America/New_York, in the available desktop Chrome browser. Requested 390 × 844, 768 × 1024, and 1440 × 900 viewport conditions were not set because this browser API does not expose resizing. The user’s mobile recording informed page selection but is not a computed-style measurement. No account-only product canvas was inspected. The root page currently shows a minimal company introduction with Overlook, About us, and Get in touch links; its browser title reads “Careers - Senior Developer - Frameable.” The welcome and Whiteboard pages retain the broader product-site navigation.
+
+Reference capture: assets/frameable-type.jpg, inspected JPEG, 1363 × 936, dated November 4. It depicts the actual root page. Company logos in screenshots are artwork and excluded from type-family licensing filters.
+
+### Evidence and source CSS
+
+Read-only browser DOM evaluation recorded computed font stack, size, weight, line height, letter spacing, font style, text transform, alignment, and text box dimensions. Repeated instances with the same role/treatment were deduplicated. Distinct serif and sans-serif section-heading variants and differing footer link weights were retained. Navigation dropdown measurements describe its expanded state on the guide, not a fourth page. All selected letter-spacing values are the computed `normal`; this does not prove the absence of kerning.
+
+Authored sources inspected:
+
+- https://frameable.com/dist/css/main.css declares GT America regular, 500, and 700, and Reckless 400 and 500 web-font faces.
+- https://frameable.com/dist/css/layouts/layout-frameable.css declares `.hero-default__title` with Reckless and `line-height: 1.3`; its 40px default changes to 48px at `min-width: 576px`. The product hero computes to 48px/62.4px at the sampled viewport. It also declares `.submenu__description` at 12px and line-height 1.1, matching the 12px/13.2px dropdown sample.
+- The welcome guide’s inline style sets `section h1` to Reckless/Georgia/Bitstream Charter at weight 500, and `section[data-level="2"] h2` to 28px. Its computed title is 48px/57.6px and section heading 28px/33.6px.
+- https://frameable.com/dist/css/layouts/layout-company.css supplies the root page’s GT America declarations and system fallbacks.
+
+These CSS declarations are evidence about implementation, not rendered mobile samples. Computed stacks and font-face rules do not prove the exact font binary used for every glyph. The browser’s restricted DOM interface did not expose an iterable FontFaceSet; no glyph-level font identity or variable-font axis claim is made. The product page was also scrolled through its feature and closing/footer sections to inspect the broader hierarchy.
+
+### Selected role measurements
+
+Sizes, line heights, letter spacing, and boxes below are CSS pixels. The full corresponding records are in data.js. Width and height are element boxes, including padding/borders where applicable, not visible-glyph dimensions.
+
+| Page | Role | Family | Size | Line height | Weight | Letter spacing | Box width | Box height |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| home | Homepage introduction | GT America | 18px | 27px | 400 | normal | 333.48 | 54 |
+| home | Homepage navigation link | GT America | 18px | 27px | 500 | normal | 73.92 | 27 |
+| home | Homepage legal link | GT America | 18px | 27px | 400 | normal | 47.34 | 27 |
+| welcome | Navigation dropdown label | GT America | 16px | 24px | 400 | normal | 115.95 | 42 |
+| welcome | Navigation link | GT America | 16px | 24px | 500 | normal | 87.16 | 42 |
+| welcome | Header action | GT America | 16px | 24px | 500 | normal | 119.73 | 44 |
+| welcome | Page heading | Reckless | 48px | 57.6px | 500 | normal | 820 | 96.98 |
+| welcome | Body paragraph | GT America | 18px | 27px | 400 | normal | 820 | 108 |
+| welcome | Section heading | GT America | 28px | 33.6px | 500 | normal | 820 | 33.59 |
+| welcome | List paragraph | GT America | 18px | 27px | 400 | normal | 780 | 135 |
+| welcome | Article action link | GT America | 16px | 25.6px | 500 | normal | 391.88 | 20 |
+| welcome | Contents link | GT America | 16px | 21.28px | 500 | normal | 187.09 | 41.27 |
+| welcome | Footer group heading | GT America | 16px | 25.6px | 700 | normal | 160 | 25.59 |
+| welcome | Footer navigation | GT America | 16px | 25.6px | 500 | normal | 78.02 | 20 |
+| welcome | Footer description | GT America | 16px | 25.6px | 400 | normal | 420 | 76.78 |
+| welcome | Dropdown category label | GT America | 14px | 15.4px | 400 | normal | 265.75 | 39.39 |
+| welcome | Dropdown product name | GT America | 16px | 24px | 500 | normal | 148.83 | 24 |
+| welcome | Dropdown description | GT America | 12px | 13.2px | 500 | normal | 148.83 | 17.19 |
+| whiteboard | Product navigation name | GT America | 16px | 24px | 700 | normal | 107.2 | 38 |
+| whiteboard | Product dropdown label | GT America | 16px | 24px | 400 | normal | 159.98 | 42 |
+| whiteboard | Product navigation link | GT America | 16px | 24px | 400 | normal | 84.58 | 42 |
+| whiteboard | Hero heading | Reckless | 48px | 62.4px | 500 | normal | 460 | 124.78 |
+| whiteboard | Hero description | GT America | 20px | 26px | 400 | normal | 460 | 52 |
+| whiteboard | Primary action | GT America | 19.2px | 28.8px | 500 | normal | 155.73 | 46.8 |
+| whiteboard | Benefit heading | GT America | 20px | 32px | 500 | normal | 177.62 | 32 |
+| whiteboard | Benefit paragraph | GT America | 16px | 22.4px | 400 | normal | 372.39 | 67.17 |
+| whiteboard | Templates heading | Reckless | 40px | 53.2px | 500 | normal | 1213.19 | 53.19 |
+| whiteboard | Templates description | GT America | 24px | 38.4px | 400 | normal | 1213.19 | 38.39 |
+| whiteboard | Feature heading | Reckless | 36px | 45px | 500 | normal | 459.67 | 144 |
+| whiteboard | Feature paragraph | GT America | 18px | 25.2px | 400 | normal | 459.67 | 50.38 |
+| whiteboard | Feature action link | GT America | 18px | 25.2px | 500 | normal | 459.67 | 25.19 |
+| whiteboard | Feature group heading | GT America | 24px | 31.92px | 500 | normal | 300 | 31.91 |
+| whiteboard | Feature list paragraph | GT America | 16px | 21.28px | 400 | normal | 240.39 | 70.97 |
+| whiteboard | Integration heading | GT America | 32px | 51.2px | 500 | normal | 784.95 | 51.19 |
+| whiteboard | Integration description | GT America | 24px | 38.4px | 400 | normal | 784.95 | 38.39 |
+| whiteboard | Video action | GT America | 24px | 36px | 500 | normal | 244.23 | 62 |
+| whiteboard | Section label | GT America | 16px | 22.4px | 500 | normal | 114.16 | 34.39 |
+| whiteboard | Use cases heading | Reckless | 40px | 48px | 500 | normal | 572.77 | 48 |
+| whiteboard | Use case tab | GT America | 18px | 21.6px | 400 | normal | 245.17 | 59.59 |
+| whiteboard | Use case heading | GT America | 28px | 33.6px | 500 | normal | 493.19 | 33.59 |
+| whiteboard | Testimonial heading | GT America | 21.06px | 31.59px | 500 | normal | 574.59 | 31.59 |
+| whiteboard | Testimonial paragraph | GT America | 18px | 27px | 400 | normal | 468 | 81 |
+| whiteboard | Closing heading | Reckless | 48px | 52.8px | 500 | normal | 880 | 52.8 |
+| whiteboard | Closing description | GT America | 18px | 28.8px | 400 | normal | 1213.19 | 28.8 |
+| whiteboard | Footer group heading | GT America | 16px | 25.6px | 700 | normal | 160 | 25.59 |
+| whiteboard | Footer navigation | GT America | 16px | 25.6px | 400 | normal | 74.75 | 20 |
+| whiteboard | Footer description | GT America | 16px | 25.6px | 400 | normal | 420 | 76.78 |
+
+### Font availability
+
+Checked November 4, 2026. GT America is sold by Grilli Type (https://www.grillitype.com/typeface/gt-america; web licensing at https://www.grillitype.com/shops/gt-america). Reckless is sold by Displaay (https://displaay.net/typeface/reckless; license at https://displaay.net/help/licenses). Classify both as paid, non-Google primary families. Trial fonts are not classified as free production fonts. No font binaries were downloaded or redistributed. System and generic fallbacks are not primary-font records.
+
+### Interpretation and limits
+
+Reckless is reserved for selected large titles; GT America handles navigation, body text, and many smaller section headings. The style set is not evidence of one modular ratio. The 48px guide title has a 1.2 line-height ratio, the 48px product hero 1.3, and the 36px feature heading 1.25. The guide body’s 820px box and the product hero description’s 460px box should not be described as character counts. The product page uses multiple H1 elements for visual section headings; the guide describes text function, not a recommended semantic heading structure. Color and accessibility conformance are outside this study.
+
+Existing ten records and their captures remain unchanged. Validation checks IDs, role references, required fields, primary-family coverage, filters, syntax, and nonempty images; browser gallery checks and Pages publication are reported separately.

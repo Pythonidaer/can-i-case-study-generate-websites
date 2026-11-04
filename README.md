@@ -68,3 +68,7 @@ Added the homepage, linked About/FAQ publication page, and default course catalo
 ## Matcha addition — November 3, 2026
 
 Added the homepage, About page, and linked job directory with 25 measured roles using the existing page-grouped guide format. JetBrains Mono qualifies for Google Fonts and free-font filters. The review covers the actual desktop viewport; other target widths remain pending. See [review notes](REVIEW_NOTES_2026-10-28.md#matcha--november-3-2026) for evidence and limitations. Existing studies are preserved.
+
+## Frameable addition — November 4, 2026
+
+Added Frameable’s homepage, welcome guide with its expanded Products dropdown, and Whiteboard product page using the existing role tables. The study includes 47 measured roles at 1363 × 936 CSS pixels, with GT America and Reckless classified as paid families using foundry sources. Both are excluded from Google-font and free-font filter results. The dated homepage screenshot preserves the actual minimal entry page rather than substituting a product hero. Target viewport checks remain partial. See the Frameable section in the review notes for scope and source CSS.
